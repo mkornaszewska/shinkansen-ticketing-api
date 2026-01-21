@@ -1,48 +1,14 @@
 {
   "stations": [
-    {
-      "id": "STK",
-      "name": "東京",
-      "kana": "とうきょう",
-      "romaji": "Tokyo",
-      "region": "関東"
-    },
-    {
-      "id": "NGY",
-      "name": "名古屋",
-      "kana": "なごや",
-      "romaji": "Nagoya",
-      "region": "中部"
-    },
-    {
-      "id": "KYO",
-      "name": "京都",
-      "kana": "きょうと",
-      "romaji": "Kyoto",
-      "region": "関西"
-    },
-    {
-      "id": "SNO",
-      "name": "新大阪",
-      "kana": "しんおおさか",
-      "romaji": "Shin-Osaka",
-      "region": "関西"
-    }
+    { "id": "STK", "name": "東京", "kana": "とうきょう", "romaji": "Tokyo", "region": "関東" },
+    { "id": "NGY", "name": "名古屋", "kana": "なごや", "romaji": "Nagoya", "region": "中部" },
+    { "id": "KYO", "name": "京都", "kana": "きょうと", "romaji": "Kyoto", "region": "関西" },
+    { "id": "SNO", "name": "新大阪", "kana": "しんおおさか", "romaji": "Shin-Osaka", "region": "関西" }
   ],
 
   "trains": [
-    {
-      "id": "NOZ001",
-      "name": "のぞみ 1号",
-      "line": "東海道新幹線",
-      "operator": "JR東海"
-    },
-    {
-      "id": "HIK010",
-      "name": "ひかり 10号",
-      "line": "東海道新幹線",
-      "operator": "JR東海"
-    }
+    { "id": "NOZ001", "name": "のぞみ 1号", "line": "東海道新幹線", "operator": "JR東海" },
+    { "id": "HIK010", "name": "ひかり 10号", "line": "東海道新幹線", "operator": "JR東海" }
   ],
 
   "routes": [
@@ -71,7 +37,19 @@
       "routeId": "R001",
       "departureAt": "2026-01-21T09:00:00+09:00",
       "arrivalAt": "2026-01-21T11:30:00+09:00",
-      "carriages": 16
+      "carriages": 16,
+      "seatInventory": [
+        {
+          "carriage": 3,
+          "class": "STANDARD",
+          "seats": ["1A", "1B", "1C", "1D", "2A", "2B", "2C", "2D"]
+        },
+        {
+          "carriage": 10,
+          "class": "GREEN",
+          "seats": ["1A", "1B", "2A", "2B"]
+        }
+      ]
     },
     {
       "id": "SV20260121-HIK010",
@@ -79,24 +57,14 @@
       "routeId": "R002",
       "departureAt": "2026-01-21T10:03:00+09:00",
       "arrivalAt": "2026-01-21T12:30:00+09:00",
-      "carriages": 16
-    }
-  ],
-
-  "seatMaps": [
-    {
-      "id": "SM-SV20260121-NOZ001-STD",
-      "serviceId": "SV20260121-NOZ001",
-      "carriage": 3,
-      "class": "STANDARD",
-      "seats": ["1A", "1B", "1C", "1D", "2A", "2B", "2C", "2D"]
-    },
-    {
-      "id": "SM-SV20260121-NOZ001-GRN",
-      "serviceId": "SV20260121-NOZ001",
-      "carriage": 10,
-      "class": "GREEN",
-      "seats": ["1A", "1B", "2A", "2B"]
+      "carriages": 16,
+      "seatInventory": [
+        {
+          "carriage": 5,
+          "class": "STANDARD",
+          "seats": ["1A", "1B", "1C", "1D"]
+        }
+      ]
     }
   ],
 
@@ -109,14 +77,11 @@
         "nameKana": "やまだたろう",
         "email": "taro.yamada@example.com"
       },
-      "seat": {
-        "carriage": 3,
-        "seatNo": "1A",
-        "class": "STANDARD"
-      },
+      "seat": { "carriage": 3, "seatNo": "1A", "class": "STANDARD" },
       "fareYen": 14200,
       "status": "CONFIRMED",
       "createdAt": "2026-01-21T08:10:00+09:00"
     }
   ]
 }
+
